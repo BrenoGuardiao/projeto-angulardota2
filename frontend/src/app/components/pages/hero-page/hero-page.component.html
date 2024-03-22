@@ -1,0 +1,41 @@
+<app-not-found
+  [visible]="!hero.id"
+  notFoundMessage="Hero Not Found"
+  resetLinkText="Back To Homepage">
+</app-not-found>
+<div *ngIf="hero.id" class="container">
+  <img [src]="hero.imageUrl" [alt]="hero.name"/>
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{hero.name}}
+      </span>
+    </div>
+
+    <div class="attribute">
+      <span class="name">
+        {{hero.attribute}}
+      </span>
+    </div>
+
+    <div class="position">
+      <span class="name">
+        {{hero.position}}
+      </span>
+    </div>
+
+    <div class="desc">
+      <span class="name">
+        {{hero.desc}}
+      </span>
+    </div>
+
+    <div class="matches">
+      <span class="name">
+        {{hero.matches}}
+      </span>
+    </div>
+
+  </div>
+</div>

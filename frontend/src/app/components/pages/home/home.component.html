@@ -1,0 +1,25 @@
+<app-search></app-search>
+<app-not-found
+[visible]="!heroes || !heroes.length"
+resetLinkText="Reset Search">
+</app-not-found>
+<ul>
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/hero/{{hero.id}}">
+      <img [src]="hero.imageUrl" [alt]="hero.name"/>
+      <div class="content">
+        <div class="name">
+          {{hero.name}}
+        </div>
+        <div class="attribute">
+          {{hero.attribute}}
+        </div>
+        <div class="position">
+          <span>
+          {{hero.position}}
+        </span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
